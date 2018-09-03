@@ -47,14 +47,15 @@ class App extends Component {
       <SearchkitProvider searchkit={searchkit}>
         <Layout>
           <TopBar>
-            <div className="my-logo">Searchkit Acme co</div>
+            <div className="my-logo">Personal StackOverflow</div>
             <SearchBox autofocus={true} searchOnChange={true} prefixQueryFields={["title^1","director^2"]}/>
           </TopBar>
-<LayoutBody>
-
-        <LayoutResults>
-          <ActionBar>
-
+          <LayoutBody>
+          <SideBar>
+            <HierarchicalMenuFilter fields={["year"]} title="Years" id="Years"/>
+          </SideBar>
+          <LayoutResults>
+            <ActionBar>
             <ActionBarRow>
               <HitsStats/>
             </ActionBarRow>
